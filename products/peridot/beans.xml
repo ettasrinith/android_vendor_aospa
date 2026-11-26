@@ -6,9 +6,13 @@
 <manifest>
   <include name="../platforms/pineapple.xml" />
 
+  <!-- device/qcom/common: our calcite fork carries the 6.1/pineapple fixes -->
+  <remove-project name="AOSPA/android_device_qcom_common" />
+  <project path="device/qcom/common" name="ettasrinith/android_device_qcom_common" remote="github" revision="calcite" />
+
   <!-- Device Dependencies -->
   <project path="device/xiaomi/peridot" name="ettasrinith/android_device_xiaomi_peridot" remote="github" revision="calcite" />
   <project path="device/xiaomi/peridot-prebuilt" name="ettasrinith/android_device_xiaomi_peridot-prebuilt" remote="github" revision="calcite" clone-depth="1" />
   <project path="hardware/xiaomi" name="AOSPA/android_hardware_xiaomi" remote="aospa" revision="calcite" />
-  <project path="vendor/xiaomi/peridot" name="ettasrinith/proprietary_vendor_xiaomi_peridot" remote="github" revision="calcite" clone-depth="1" />
+  <project path="vendor/xiaomi/peridot" name="ettasrinith/android_vendor_xiaomi_peridot" remote="github" revision="main" clone-depth="1" />
 </manifest>
