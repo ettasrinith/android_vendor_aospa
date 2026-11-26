@@ -1,8 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
-     SPDX-FileCopyrightText: 2025 Paranoid Android
+     SPDX-FileCopyrightText: 2025-2026 Paranoid Android
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest>
   <include name="../platforms/pineapple.xml" />
+
+  <!-- Device Dependencies -->
+  <project path="device/xiaomi/peridot" name="ettasrinith/android_device_xiaomi_peridot" remote="github" revision="calcite" />
+  <project path="device/xiaomi/peridot-prebuilt" name="ettasrinith/android_device_xiaomi_peridot-prebuilt" remote="github" revision="calcite" clone-depth="1" />
+  <project path="hardware/xiaomi" name="AOSPA/android_hardware_xiaomi" remote="aospa" revision="calcite" />
+  <project path="vendor/xiaomi/peridot" name="ettasrinith/proprietary_vendor_xiaomi_peridot" remote="github" revision="calcite" clone-depth="1" />
 </manifest>
